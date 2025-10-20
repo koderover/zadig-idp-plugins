@@ -81,8 +81,3 @@ gitlab-mr-plugin/
 3. 点击"Create personal access token"
 
 4. 复制生成的 Token 到插件配置中
-
-
-## 许可证
-
-Apache-2.0
