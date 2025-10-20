@@ -1,14 +1,14 @@
-# GitLab MR插件使用说明
+# GitLab MR 插件使用说明
 
 ## 插件上传和安装
 
 ### 1. 准备插件文件
 
-确保你有插件的主文件：`index.js`
+确保你有插件的主文件：`plugin.js`
 
-### 2. 在Zadig中上传插件
+### 2. 在 Zadig 系统中上传插件
 
-1. 进入 Zadig 系统设置 → 插件管理
+1. 进入 Zadig 系统设置 → 插件管理页面
 2. 点击"新建插件"
 3. 填写插件信息：
    - **插件名称**: GitLab MR 查看器
@@ -16,7 +16,7 @@
    - **路由路径**: `/gitlab-mr` 
    - **插件描述**: 查看分配给我的 GitLab Merge Request
    - **插件状态**: 启用
-4. 上传 `index.js` 文件
+4. 上传 `plugin.js` 文件
 5. 点击"创建插件"
 
 ### 3. 访问插件
@@ -26,9 +26,9 @@
 
 ## 初次使用配置
 
-### 1. 获取GitLab Access Token
+### 1. 获取 GitLab Access Token
 
-#### GitLab.com用户：
+#### GitLab.com 用户：
 1. 访问 https://gitlab.com/-/profile/personal_access_tokens
 2. 点击"Create personal access token"
 3. 填写信息：
@@ -78,15 +78,15 @@
 - 我创建的：你创建的 MR
 - 全部：所有相关的 MR
 
-### 查看MR详情
+### 查看 MR 详情
 
-点击任意MR行会在新窗口中打开 GitLab 的 MR 详情页面。
+点击任意 MR 行会在新窗口中打开 GitLab 的 MR 详情页面。
 
 ### 刷新数据
 
 点击右上角"刷新"按钮获取最新的MR数据。
 
-## 常见问题
+## FAQ
 
 ### Q: 提示"连接失败"怎么办？
 
