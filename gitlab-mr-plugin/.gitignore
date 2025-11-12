@@ -15,7 +15,7 @@ pnpm-debug.log*
 .pnp.*
 
 # Build outputs
-build/
+dist/
 *.tgz
 *.tar.gz
 

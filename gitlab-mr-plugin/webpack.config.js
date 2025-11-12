@@ -1,12 +1,13 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
 module.exports = {
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'plugin.js',
-    library: 'GitLabMRPlugin',
+    library: 'GitlabMrPlugin',
     libraryTarget: 'umd',
     libraryExport: 'default'
   },
@@ -29,6 +30,26 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['vue-style-loader', 'css-loader']
+      },
+      {
+        test: /\.less$/,
+        use: ['vue-style-loader', 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'img/[name].[hash:7].[ext]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          name: 'fonts/[name].[hash:7].[ext]'
+        }
       }
     ]
   },
@@ -44,20 +65,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
-      '@': path.resolve(__dirname, './')
+      '@': path.resolve(__dirname, 'src')
     }
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new (require('terser-webpack-plugin'))({
-        extractComments: false,
-        terserOptions: {
-          format: {
-            comments: false, 
-          },
-        },
-      }),
-    ],
   }
 }

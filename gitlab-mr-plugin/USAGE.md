@@ -38,7 +38,8 @@
 4. 点击 "Create personal access token"
 5. 复制生成的 Token（注意：只显示一次）
 
-#### 私有GitLab实例用户：
+#### 私有 GitLab 实例用户
+
 1. 访问 `你的 GitLab 地址/-/profile/personal_access_tokens`
 2. 按照上述步骤创建 Token
 
